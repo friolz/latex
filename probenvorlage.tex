@@ -1,0 +1,166 @@
+\documentclass[a4paper,11pt, headsepline, footsepline]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{scrpage2}
+\usepackage[]{graphicx}
+\usepackage{paralist}
+\usepackage[babel,german=quotes]{csquotes}
+\usepackage{geometry}
+\usepackage[math]{iwona} %hübsche Schrift
+\usepackage[decimalsymbol=comma]{siunitx} % Einheiten so: \SI{3.4}{kg} -> 3,4 kg
+\usepackage{tikz}
+\usepackage{fancybox}
+\usepackage{calc}
+\usepackage{picture}
+\usepackage{ulem}
+\usepackage{formular}
+\usepackage{pifont}
+
+\newcommand{\tick}{\ding{51}}
+\newcommand{\cross}{\ding{55}}
+
+\geometry{a4paper, portrait, inner=2.5cm, outer=2cm, top=2.5cm, bottom=2cm}
+
+\newcounter{AufgabenCounter}
+\setcounter{AufgabenCounter}{1}
+
+\pagestyle{scrheadings}
+\newcommand{\Thema}{Thema der Probe}
+\newcommand{\Datum}{Datum}
+\newcommand{\Fach}{Englisch}
+\newcommand{\Probenart}{Kurzprobe}
+\newcommand{\Seite}{Seite \thepage/\pageref{LastPage}}
+
+
+% Nummer und Punkte selbst angeben
+\newcommand{\AufgabeNrPkt}[2]{\vspace{5mm} \textbf{#1) \hfill (#2 Punkte)} }
+
+% Nummer selbst angeben, aber keine Anzeige von Punkten 
+\newcommand{\AufgabeNr}[1]{\vspace{5mm} \textbf{#1)} }
+
+% Nummer automatisch und keine Anzeige von Punkten 
+\newcommand{\Aufgabe}{%
+\AufgabeNr{Aufgabe \theAufgabenCounter}%
+\stepcounter{AufgabenCounter}}
+
+% Nummer automatisch, Anzeige von Punkten 
+\newcommand{\AufgabePkt}[1]{%
+\AufgabeNrPkt{Aufgabe \theAufgabenCounter}{#1}%
+\stepcounter{AufgabenCounter}}
+
+\newcommand{\karos}[2]{
+  \begin{tikzpicture}
+    \draw[step=0.5cm,color=gray] (0,0) grid (#1 cm ,#2 cm);
+  \end{tikzpicture}
+}
+
+\setlength{\parindent}{0pt} % Absatzeinrückung von Links
+
+\begin{document}
+\lohead{Name:\\}
+\rohead{\Fach \\ \Probenart, \Datum}
+
+\cfoot{} 
+% leere Fußzeile, damit keine Seitenzahl in der Fußzeile erscheint. 
+% Wir haben ja eine in der Kopfzeile
+\lofoot{z.B Name der Schule}
+\rofoot{\Seite}
+
+\cohead{\large{\Thema}}
+
+\newFRMfield{line}{10cm}
+
+
+\AufgabePkt{2}\\
+Schreibe in der Höflichkeitsform.
+\begin{enumerate}[a)]
+\item Ich hätte gerne einen Apfel.\\\\
+\useFRMfield{line}
+\item Wir hätten gerne Wasser.\\\\
+\useFRMfield{line}
+\end{enumerate}
+
+\AufgabePkt{2}\\
+\textit{simple present}\\
+\ovalbox{\textit{Hinweis:}
+\textit{\tick =  simple present}
+\textit{\cross = simple present verneint}}
+\begin{enumerate}[a)]
+\newFRMfield{verb_watch}{30mm}[watch]
+\newFRMfield{verb_visit}{40mm}[visit]
+\newFRMfield{verb_go}{30mm}[go]
+\newFRMfield{verb_like}{40mm}[like]
+\item \tick \ Tom \useFRMfield{verb_watch} the football match.
+\item \cross \ Sally \useFRMfield{verb_visit} her aunt Claire.
+\item \tick \ Peter and Simon \useFRMfield{verb_go} to school.
+\item \cross \ We \useFRMfield{verb_like} school.
+\end{enumerate}
+
+\AufgabePkt{2}\\
+\textit{simple past}\\
+\ovalbox{\textit{Hinweis:}
+\textit{\tick = simple past}
+\textit{\cross = simple past verneint}}
+\begin{enumerate}[a)]
+\newFRMfield{verb_walk}{30mm}[walk]
+\newFRMfield{verb_bring}{40mm}[bring]
+\newFRMfield{verb_answer}{40mm}[answer]
+\newFRMfield{verb_plan}{30mm}[plan]
+\item \cross \ Timothy \useFRMfield{verb_walk} to the beach.
+\item \tick \ Alex \useFRMfield{verb_bring} some cake.
+\item \tick \ Monica \useFRMfield{verb_answer} the phone.
+\item \cross \ The Smiths \useFRMfield{verb_plan} their trip to Germany.
+\end{enumerate}
+
+\AufgabePkt{2}\\
+\textit{future}\\
+\ovalbox{\textit{Hinweis:}
+\textit{\tick = future}
+\textit{\cross = future verneint}}
+\begin{enumerate}[a)]
+\newFRMfield{verb_eat}{40mm}[eat]
+\newFRMfield{verb_drive}{40mm}[drive]
+\newFRMfield{verb_write}{40mm}[write]
+\newFRMfield{verb_talk}{40mm}[talk]
+\item \tick \ The Smiths \useFRMfield{verb_eat} some burgers.
+\item \tick \ Anthony \useFRMfield{verb_drive} home soon.
+\item \cross \ The student \useFRMfield{verb_write} a test.
+\item \cross \ I \useFRMfield{verb_talk} to you now.
+\end{enumerate}
+
+\newpage
+\AufgabePkt{5}\\\\
+\huge
+\begin{tabular}{|l|r|}
+	\hline
+	English & German \\
+	\hline
+	elk & \\
+	\hline
+	 & Unabhängigkeit \\
+	\hline
+	 & Taschenlampe \\
+	\hline
+	shining & \\
+	\hline
+	 & (Menschen-)Menge \\
+	\hline
+	equipment & \\
+	\hline
+	scissors & \\
+	\hline
+	 & Abfall \\
+	\hline
+	 & Seife \\
+	\hline
+	buck \textit{(informal, AE)} & \\
+	\hline
+\end{tabular}
+
+{\bigskip {\large \textsl{Viel Erfolg!}}}
+
+\end{document}
