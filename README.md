@@ -1,5 +1,5 @@
-## LaTeX-Vorlage für Proben
+## Meine LaTeX-Vorlagen
 
-Geeignet für TeX-affine Lehrkräfte! :-)
-
-basierend auf https://github.com/jonasstein/klausur-tex von Jonas Stein
+- minimal.tex (minimales Grundgerüst)
+- probenvorlage.tex (Vorlage für TeX-affine Lehrkräfte)
+	- basierend auf https://github.com/jonasstein/klausur-tex von Jonas Stein
