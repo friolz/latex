@@ -4,18 +4,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage{eurosym}
 \usetheme{Warsaw}
-%\usecolortheme{beetle}
+\usecolortheme{beetle}
 
 \title {My Title}
 \subtitle{}
-\author {Tobias Frischholz  friolz.com}
+\author {Tobias Frischholz}
 \date {Regierung von Oberbayern, 2015}
 
 \begin{document}
 \frame{\titlepage}
 
 \begin{frame}
-	Sample Text.
+	\frametitle{This is the first slide}
 \end{frame}
 
 \begin{frame}
